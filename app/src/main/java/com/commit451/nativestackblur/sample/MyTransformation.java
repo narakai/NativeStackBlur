@@ -22,8 +22,7 @@ class MyTransformation extends BitmapTransformation {
 
     @Override
     protected Bitmap transform(@NonNull BitmapPool pool, @NonNull Bitmap toTransform, int outWidth, int outHeight) {
-        Bitmap bm = NativeStackBlur.process(toTransform, mBlurRadius);
-        return bm;
+        return NativeStackBlur.process(toTransform, mBlurRadius);
     }
 
     @Override
