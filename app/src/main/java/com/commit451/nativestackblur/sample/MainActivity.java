@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         Glide.with(this)
                 .load("https://www.androidcentral.com/sites/androidcentral.com/files/styles/large/public/article_images/2014/10/lollipop-statue-2.jpg")
-                .transform(new MyTransformation(20))
+                .transform(new MyTransformation(50))
                 .into(mBlurredImage);
     }
 }

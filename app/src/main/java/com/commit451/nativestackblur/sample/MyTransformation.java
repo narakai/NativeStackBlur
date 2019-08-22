@@ -10,6 +10,8 @@ import com.commit451.nativestackblur.NativeStackBlur;
 import java.nio.charset.Charset;
 import java.security.MessageDigest;
 
+import hugo.weaving.DebugLog;
+
 class MyTransformation extends BitmapTransformation {
     private static final String ID = "com.bumptech.glide.transformations.MyTransformation";
     private static final byte[] ID_BYTES = ID.getBytes(Charset.forName("UTF-8"));
@@ -20,6 +22,7 @@ class MyTransformation extends BitmapTransformation {
         mBlurRadius = blurRadius;
     }
 
+    @DebugLog
     @Override
     protected Bitmap transform(@NonNull BitmapPool pool, @NonNull Bitmap toTransform, int outWidth, int outHeight) {
         return NativeStackBlur.process(toTransform, mBlurRadius);
