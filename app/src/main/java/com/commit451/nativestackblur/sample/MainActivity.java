@@ -1,10 +1,10 @@
 package com.commit451.nativestackblur.sample;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.widget.ImageView;
 
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,13 +17,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mImage = (ImageView) findViewById(R.id.image);
         mBlurredImage = (ImageView) findViewById(R.id.blurredImage);
-        Picasso.with(this)
-                .load("http://www.androidcentral.com/sites/androidcentral.com/files/styles/large/public/article_images/2014/10/lollipop-statue-2.jpg?itok=RC1ovcEz")
+        Glide.with(this)
+                .load("https://www.androidcentral.com/sites/androidcentral.com/files/styles/large/public/article_images/2014/10/lollipop-statue-2.jpg")
                 .into(mImage);
 
-        Picasso.with(this)
-                .load("http://www.androidcentral.com/sites/androidcentral.com/files/styles/large/public/article_images/2014/10/lollipop-statue-2.jpg?itok=RC1ovcEz")
-                .transform(new BlurTransformation(8))
+        Glide.with(this)
+                .load("https://www.androidcentral.com/sites/androidcentral.com/files/styles/large/public/article_images/2014/10/lollipop-statue-2.jpg")
+                .transform(new MyTransformation(20))
                 .into(mBlurredImage);
     }
 }

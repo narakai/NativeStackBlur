@@ -1,4 +1,11 @@
 # NativeStackBlur
+
+NativeStackBlur with Glide transform, and migrated to androidx.
+
+
+
+Thanks for Commit 451:
+
 Android StackBlur with gradle support (only for the native method) https://github.com/kikoso/android-stackblur
 
 As you may see, kikoso has not yet provided a way to add StackBlur as a gradle dependency easily. This library is an attempt to make the NativeBlurProcess availible through gradle without the need to import any modules or do any other configuration.
